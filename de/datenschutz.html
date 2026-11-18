@@ -1,0 +1,21 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Datenschutzerklärung – AutoClip Business</title><meta name="description" content="Wie AutoClip Business Google- und YouTube-Daten verarbeitet."><link rel="stylesheet" href="../style.css"></head><body>
+<header><b>AutoClip Business</b><a href="../index.html">Home</a><a href="../privacy.html">Privacy Policy</a><a href="datenschutz.html">Datenschutz</a></header><main>
+<h1>Datenschutzerklärung</h1><p class="lead">Stand: 2026-11-19. English version: <a href="../privacy.html">Privacy Policy</a>.</p>
+<h2>1. Verantwortlicher</h2><p>Luis Fricker, Kontakt: <a href="mailto:luissecomstore@gmail.com">luissecomstore@gmail.com</a>. AutoClip Business ist Software, die lokal auf dem Rechner ihres Eigentümers läuft. Der Betreiber unterhält keinen Server, der Nutzerdaten empfängt.</p>
+<h2>2. Abgerufene Google- und YouTube-Daten</h2>
+<ul><li>Kanal-ID, Kanalname und Abonnentenzahl des autorisierten Kanals (<code>channels.list</code>, <code>mine=true</code>): einmalig bei der Einrichtung zur Bestätigung des richtigen Kanals; gespeichert wird nur die Kanal-ID.</li>
+<li>Videodateien und Titel, die der Eigentümer veröffentlichen lässt (<code>videos.insert</code>): Upload auf den eigenen Kanal, standardmäßig privat.</li>
+<li>Upload-, Verarbeitungs- und Sichtbarkeitsstatus selbst hochgeladener Videos (<code>videos.list</code>, <code>part=status</code>): Bestätigung des Uploads.</li></ul>
+<p>Es werden keine Daten anderer Nutzer, Kommentare, Wiedergabeverläufe, Abonnements oder Analysedaten gelesen und kein anderer Google-Dienst genutzt.</p>
+<h2>3. Verwendete OAuth-Berechtigungen</h2><ul><li><code>https://www.googleapis.com/auth/youtube.upload</code></li><li><code>https://www.googleapis.com/auth/youtube.readonly</code></li></ul><p>Weitere Berechtigungen werden nicht angefordert.</p>
+<h2>4. Speicherung der Tokens</h2><p>Refresh-Token, OAuth-Client-Konfiguration und Kanal-ID liegen im macOS-Schlüsselbund auf dem Rechner des Eigentümers. Kurzlebige Access-Tokens existieren nur im Arbeitsspeicher des laufenden Prozesses. Die OAuth-Client-Datei kann zusätzlich im lokalen Ordner <code>config</code> mit Zugriffsrechten nur für den Eigentümer liegen. Auf Servern des Entwicklers wird nichts gespeichert.</p>
+<h2>5. Weitergabe an Dritte</h2><p>Google-Nutzerdaten werden nicht verkauft, nicht an Dritte weitergegeben und nicht für Werbung, Profiling oder das Training von KI-Modellen verwendet. Daten fließen nur zwischen dem Rechner des Eigentümers und den Google-/YouTube-APIs. Es gibt keine Analyse- oder Tracking-Dienste. Videoanalyse und Spracherkennung laufen lokal. Die Nutzung der von Google-APIs erhaltenen Informationen entspricht der <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a> einschließlich der Limited-Use-Anforderungen.</p>
+<h2>6. Speicherdauer</h2><p>Tokens und Kanal-ID bleiben bis zur Entfernung durch den Eigentümer im Schlüsselbund. Die lokale Datenbank hält öffentliche URLs und Status hochgeladener Videos, bis sie gelöscht wird.</p>
+<h2>7. Zugriff widerrufen und Daten löschen</h2>
+<ul><li>Bei Google: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> &rarr; AutoClip Business &rarr; Zugriff entfernen.</li>
+<li>Lokal: <code>.venv/bin/python bin/revoke_local.py</code> widerruft den Token bei Google und löscht die Schlüsselbund-Einträge.</li>
+<li>Lokale Daten: Ordner <code>data</code> und <code>output</code> löschen. Bereits hochgeladene Videos bleiben bis zur Löschung in YouTube Studio auf dem Kanal.</li></ul>
+<h2>8. Diese Website</h2><p>Statische Seiten ohne Cookies, Analyse oder Formulare. Hosting durch GitHub Pages; dort können technische Server-Logs (z. B. IP-Adressen) nach der eigenen Datenschutzerklärung des Anbieters verarbeitet werden.</p>
+<h2>9. Betroffenenrechte und Kontakt</h2><p>Sie haben die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung und Widerspruch sowie das Recht auf Beschwerde bei einer Aufsichtsbehörde. Kontakt: <a href="mailto:luissecomstore@gmail.com">luissecomstore@gmail.com</a>.</p>
+</main><footer>AutoClip Business &middot; Luis Fricker &middot; <a href="mailto:luissecomstore@gmail.com">luissecomstore@gmail.com</a></footer></body></html>

@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy – AutoClip Business</title><meta name="description" content="How AutoClip Business handles Google and YouTube user data."><link rel="stylesheet" href="style.css"></head><body>
+<header><b>AutoClip Business</b><a href="index.html">Home</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="de/datenschutz.html">Deutsch</a></header><main>
+<h1>Privacy Policy</h1><p class="lead">Last updated: 2026-11-19. Deutsche Fassung: <a href="de/datenschutz.html">Datenschutzerklärung</a>.</p>
+<h2>1. Who is responsible</h2>
+<p>Luis Fricker, contact: <a href="mailto:luissecomstore@gmail.com">luissecomstore@gmail.com</a>. AutoClip Business is software that runs locally on the computer of its owner. The operator does not run a server that receives users' data.</p>
+<h2>2. Google and YouTube data the application accesses</h2>
+<table><tr><th>Data</th><th>API call</th><th>Purpose</th></tr>
+<tr><td>Channel ID, channel title, subscriber count of the authorized channel</td><td>YouTube Data API <code>channels.list</code> (<code>mine=true</code>)</td><td>Shown once during setup so the owner can confirm the correct channel; only the channel ID is kept, to detect a wrong-channel mix-up.</td></tr>
+<tr><td>Video files and titles the owner chooses to publish</td><td><code>videos.insert</code></td><td>Uploading finished clips to the owner's channel (private by default).</td></tr>
+<tr><td>Upload status, processing status and privacy status of videos uploaded by the application</td><td><code>videos.list</code> (<code>part=status</code>)</td><td>Confirming that an upload succeeded and with which visibility.</td></tr></table>
+<p>The application does not read other users' data, comments, watch history, subscriptions or analytics, and does not access any other Google service.</p>
+<h2>3. OAuth permissions used</h2>
+<ul><li><code>youtube.upload</code></li><li><code>youtube.readonly</code></li></ul>
+<p>No other scopes are requested.</p>
+<h2>4. How tokens are stored</h2>
+<p>The refresh token, the OAuth client configuration and the channel ID are stored in the macOS Keychain on the owner's computer. Short-lived access tokens exist only in the memory of the running process. The OAuth client file may also exist in the application's local <code>config</code> folder with owner-only file permissions. Nothing is stored on any server operated by the developer, and no tokens are published or embedded in this website.</p>
+<h2>5. Sharing with third parties</h2>
+<p>No Google user data is sold, shared with, or transferred to third parties, and none is used for advertising, profiling or the training of AI models. The only network communication involving Google data is between the owner's computer and Google/YouTube APIs. The application contains no analytics or tracking. Video analysis, including speech transcription, runs locally on the owner's computer.</p>
+<p>Limited Use: AutoClip Business's use and transfer to any other app of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements. Data is used only to provide the user-facing upload feature described above.</p>
+<h2>6. How long data is kept</h2>
+<p>Tokens and the channel ID stay in the Keychain until the owner removes them (section 7). The local database keeps the public URLs and status of uploaded videos until the owner deletes it. Access tokens are discarded when the process ends or after about one hour.</p>
+<h2>7. Revoking access and deleting data</h2>
+<ul><li><b>Revoke at Google:</b> <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a> &rarr; AutoClip Business &rarr; Remove access.</li>
+<li><b>Revoke and delete locally:</b> run <code>.venv/bin/python bin/revoke_local.py</code> in the application folder. It revokes the refresh token at Google and deletes the Keychain entries.</li>
+<li><b>Delete local records:</b> delete the <code>data</code> and <code>output</code> folders. Videos already uploaded to YouTube remain on the owner's channel until deleted in YouTube Studio.</li></ul>
+<h2>8. This website</h2>
+<p>This website consists of static pages and uses no cookies, analytics or forms. It is hosted by GitHub Pages, which may process technical server logs (such as IP addresses) under its own privacy policy.</p>
+<h2>9. Children</h2><p>The application is not directed at children.</p>
+<h2>10. Your rights and contact</h2>
+<p>If you are in the EU/EEA you have the rights of access, rectification, erasure, restriction and objection under the GDPR, and the right to lodge a complaint with a supervisory authority. Because the operator holds no user data on its own systems, requests can usually be fulfilled by the steps in section 7. Contact: <a href="mailto:luissecomstore@gmail.com">luissecomstore@gmail.com</a>.</p>
+<h2>11. Changes</h2><p>Changes to this policy will be published on this page with a new date.</p>
+</main><footer>AutoClip Business &middot; Luis Fricker &middot; <a href="mailto:luissecomstore@gmail.com">luissecomstore@gmail.com</a></footer></body></html>
